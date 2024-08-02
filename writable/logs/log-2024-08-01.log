@@ -1,0 +1,336 @@
+CRITICAL - 2024-08-01 09:04:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "navbar.php"
+[Method: GET, Route: customers]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('navbar.php')
+ 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('navbar', [], true)
+ 3 APPPATH/Views/template/header.php(165): view('navbar')
+ 4 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/task_vm/app/Views/template/header.php')
+ 5 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('template/header', [], true)
+ 7 APPPATH/Controllers/Home.php(13): view('template/header')
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->customers()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-01 15:45:22 --> mysqli_sql_exception: Unknown column 'text' in 'field list' in /opt/lampp/htdocs/task_vm/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /opt/lampp/htdocs/task_vm/system/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `custome...', 0)
+#1 /opt/lampp/htdocs/task_vm/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `custome...')
+#2 /opt/lampp/htdocs/task_vm/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `custome...')
+#3 /opt/lampp/htdocs/task_vm/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `custome...', Array, false)
+#4 /opt/lampp/htdocs/task_vm/app/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+#6 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /opt/lampp/htdocs/task_vm/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /opt/lampp/htdocs/task_vm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /opt/lampp/htdocs/task_vm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-08-01 15:45:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'text' in 'field list'
+[Method: POST, Route: customers/update/1]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `text` = :text:, `mobile_number` = :mobile_number:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:45:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'text' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `text` = \'300\', `mobile_number` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `text` = \'300\', `mobile_number` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `text` = :text:, `mobile_number` = :mobile_number:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:45:22 --> [Caused by] mysqli_sql_exception: Unknown column 'text' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `text` = \'300\', `mobile_number` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `text` = \'300\', `mobile_number` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `text` = \'300\', `mobile_number` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `text` = :text:, `mobile_number` = :mobile_number:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-01 15:47:08 --> mysqli_sql_exception: Unknown column 'model' in 'field list' in /opt/lampp/htdocs/task_vm/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /opt/lampp/htdocs/task_vm/system/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `custome...', 0)
+#1 /opt/lampp/htdocs/task_vm/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `custome...')
+#2 /opt/lampp/htdocs/task_vm/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `custome...')
+#3 /opt/lampp/htdocs/task_vm/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `custome...', Array, false)
+#4 /opt/lampp/htdocs/task_vm/app/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+#6 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /opt/lampp/htdocs/task_vm/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /opt/lampp/htdocs/task_vm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /opt/lampp/htdocs/task_vm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-08-01 15:47:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'model' in 'field list'
+[Method: POST, Route: customers/update/1]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `model` = :model:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:47:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'model' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `model` = \'300\', `price` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `model` = \'300\', `price` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `model` = :model:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:47:08 --> [Caused by] mysqli_sql_exception: Unknown column 'model' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `model` = \'300\', `price` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `model` = \'300\', `price` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `model` = \'300\', `price` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `model` = :model:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-01 15:49:03 --> mysqli_sql_exception: Unknown column 'model' in 'field list' in /opt/lampp/htdocs/task_vm/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /opt/lampp/htdocs/task_vm/system/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `custome...', 0)
+#1 /opt/lampp/htdocs/task_vm/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `custome...')
+#2 /opt/lampp/htdocs/task_vm/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `custome...')
+#3 /opt/lampp/htdocs/task_vm/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `custome...', Array, false)
+#4 /opt/lampp/htdocs/task_vm/app/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(933): App\Controllers\Customers->update('2')
+#6 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /opt/lampp/htdocs/task_vm/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /opt/lampp/htdocs/task_vm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /opt/lampp/htdocs/task_vm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-08-01 15:49:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'model' in 'field list'
+[Method: POST, Route: customers/update/2]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `model` = :model:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('2')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:49:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'model' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `id` = \'2\', `name` = \'suzuki\', `model` = \'400x\', `price` = \'2000000.00\', `status` = \'Pending\'
+WHERE `id` = \'2\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `id` = \'2\', `name` = \'suzuki\', `model` = \'400x\', `price` = \'2000000.00\', `status` = \'Pending\'
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `model` = :model:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('2')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:49:03 --> [Caused by] mysqli_sql_exception: Unknown column 'model' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `customers` SET `id` = \'2\', `name` = \'suzuki\', `model` = \'400x\', `price` = \'2000000.00\', `status` = \'Pending\'
+WHERE `id` = \'2\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `id` = \'2\', `name` = \'suzuki\', `model` = \'400x\', `price` = \'2000000.00\', `status` = \'Pending\'
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `id` = \'2\', `name` = \'suzuki\', `model` = \'400x\', `price` = \'2000000.00\', `status` = \'Pending\'
+WHERE `id` = \'2\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `model` = :model:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('2')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-01 15:51:56 --> mysqli_sql_exception: Unknown column 'm' in 'field list' in /opt/lampp/htdocs/task_vm/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /opt/lampp/htdocs/task_vm/system/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `custome...', 0)
+#1 /opt/lampp/htdocs/task_vm/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `custome...')
+#2 /opt/lampp/htdocs/task_vm/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `custome...')
+#3 /opt/lampp/htdocs/task_vm/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `custome...', Array, false)
+#4 /opt/lampp/htdocs/task_vm/app/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(933): App\Controllers\Customers->update('2')
+#6 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /opt/lampp/htdocs/task_vm/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /opt/lampp/htdocs/task_vm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /opt/lampp/htdocs/task_vm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-08-01 15:51:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'm' in 'field list'
+[Method: POST, Route: customers/update/2]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `m` = :m:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('2')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:51:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'm' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `id` = \'2\', `name` = \'suzuki\', `m` = \'400x\', `price` = \'2000000.00\', `status` = \'Available\'
+WHERE `id` = \'2\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `id` = \'2\', `name` = \'suzuki\', `m` = \'400x\', `price` = \'2000000.00\', `status` = \'Available\'
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `m` = :m:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('2')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:51:56 --> [Caused by] mysqli_sql_exception: Unknown column 'm' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `customers` SET `id` = \'2\', `name` = \'suzuki\', `m` = \'400x\', `price` = \'2000000.00\', `status` = \'Available\'
+WHERE `id` = \'2\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `id` = \'2\', `name` = \'suzuki\', `m` = \'400x\', `price` = \'2000000.00\', `status` = \'Available\'
+WHERE `id` = \'2\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `id` = \'2\', `name` = \'suzuki\', `m` = \'400x\', `price` = \'2000000.00\', `status` = \'Available\'
+WHERE `id` = \'2\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `m` = :m:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('2')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-01 15:52:25 --> mysqli_sql_exception: Unknown column 'model' in 'field list' in /opt/lampp/htdocs/task_vm/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /opt/lampp/htdocs/task_vm/system/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `custome...', 0)
+#1 /opt/lampp/htdocs/task_vm/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `custome...')
+#2 /opt/lampp/htdocs/task_vm/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `custome...')
+#3 /opt/lampp/htdocs/task_vm/system/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `custome...', Array, false)
+#4 /opt/lampp/htdocs/task_vm/app/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+#6 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 /opt/lampp/htdocs/task_vm/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /opt/lampp/htdocs/task_vm/system/Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 /opt/lampp/htdocs/task_vm/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /opt/lampp/htdocs/task_vm/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-08-01 15:52:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'model' in 'field list'
+[Method: POST, Route: customers/update/1]
+in SYSTEMPATH/Database/BaseConnection.php on line 688.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `model` = :model:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+ 4 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 5 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:52:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'model' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 317.
+ 1 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `model` = \'300\', `price` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 2 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `model` = \'300\', `price` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `model` = :model:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+ 6 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 7 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:52:25 --> [Caused by] mysqli_sql_exception: Unknown column 'model' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 312.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(312): mysqli->query('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `model` = \'300\', `price` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `model` = \'300\', `price` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `customers` SET `id` = \'1\', `name` = \'mahindra\', `model` = \'300\', `price` = \'300000.00\', `status` = \'Booked\'
+WHERE `id` = \'1\'')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `customers` SET `id` = :id.1:, `name` = :name:, `model` = :model:, `price` = :price:, `status` = :status:
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH/Controllers/Customers.php(84): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Customers->update('1')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 15:57:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/header.php"
+[Method: GET, Route: payments]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/header.php')
+ 2 SYSTEMPATH/Common.php(1169): CodeIgniter\View\View->render('template/header', [], true)
+ 3 APPPATH/Controllers/Home.php(21): view('template/header')
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->payments()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 16:17:12 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, none returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-01 16:18:53 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, array returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 20.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
