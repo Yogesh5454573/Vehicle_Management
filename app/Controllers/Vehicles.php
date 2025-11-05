@@ -52,6 +52,7 @@ class Vehicles extends BaseController
 
     public function getData(){
         $data=$this->datatable->get()->getResult();
+        print_r($data);
         $tr="";
         $i=1;
         foreach ($data as $row) {
